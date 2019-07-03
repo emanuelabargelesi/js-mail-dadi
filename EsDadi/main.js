@@ -1,23 +1,18 @@
-// dichiariamo i numeri random del dado
-var risultato = Math.floor(Math.random() * 101);
-var risultatodue = Math.floor(Math.random() * 101);
+var giocatore1, giocatore2, dado;
 
-//dichiariamo la funzione di lancio
-function lancio() {
-  document.getElementById("risultato").innerHTML = "PlayerUno: " + risultato;
-  document.getElementById("risultatodue").innerHTML = "PlayerDue: " + risultatodue;
 
-  if (risultato > risultatodue) {
-    alert("PlayerUno ha vinto con " + risultato);
+dado = Math.floor(Math.random() * 6 + 1);
+giocatore1 = dado;
+console.log('giocatore1: ' + giocatore1);
 
-  }
+dado = Math.floor(Math.random() * 6 + 1);
+giocatore2 = dado;
+console.log('giocatore2: ' + giocatore2);
 
-  else if (risultatodue > risultato) {
-    alert("PlayerDue ha vinto con " + risultatodue);
-  }
-
-  else {
-    alert("Pareggio!");
-  }
-
+if (giocatore1 === giocatore2) {
+  console.log('Pareggio!');
+} else if (giocatore1 > giocatore2) {
+  console.log('Giocatore1 vince!');
+} else {
+  console.log('Giocatore2 vince!');
 }
